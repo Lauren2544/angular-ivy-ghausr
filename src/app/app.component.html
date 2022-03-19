@@ -1,12 +1,25 @@
 <mat-button-toggle-group [(ngModel)]="is_recieving">
-  <mat-button-toggle value="start">Start receiving</mat-button-toggle>
-  <mat-button-toggle value="home">Mail Icon</mat-button-toggle>
-  <mat-button-toggle value="stop">Stop receiving</mat-button-toggle>
+  <mat-button-toggle (click)="toggle('start')" value="start"
+    >Start receiving</mat-button-toggle
+  >
+  <mat-button-toggle (click)="toggle('start')" value="home"
+    >Mail Icon</mat-button-toggle
+  >
+  <mat-button-toggle (click)="toggle('stop')" value="stop"
+    >Stop receiving</mat-button-toggle
+  >
 </mat-button-toggle-group>
-<div>Selected value: {{ is_recieving }}</div>
+<!-- <div>Selected value: {{ is_recieving }}</div>
 
-<div *ngIf="is_recieving == 'start'; else elseBlock">{{ message_counter }}</div>
-<ng-template #elseBlock> </ng-template>
+<ng-template [ngIf]="is_recieving == 'start'">
+  {{ message_counter }}
+</ng-template>
+
+<ng-template [ngIf]="is_recieving == 'home'"> </ng-template>
+
+<ng-template [ngIf]="is_recieving == 'stop'">
+  {{ message_counter }}
+</ng-template> -->
 
 <!-- <hello name="{{ name }}"></hello> -->
 <!-- <p>Start editing to see some magic happen :)</p> -->
