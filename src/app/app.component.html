@@ -1,3 +1,4 @@
+<!-- adds the buttons with function toggle triggered on click -->
 <mat-button-toggle-group [(ngModel)]="is_recieving">
   <mat-button-toggle (click)="toggle('start')" value="start"
     >Start receiving</mat-button-toggle
@@ -9,17 +10,22 @@
     >Stop receiving</mat-button-toggle
   >
 </mat-button-toggle-group>
-<!-- <div>Selected value: {{ is_recieving }}</div>
 
+<!--  prints out the current state of the button-->
+<div>Selected value: {{ is_recieving }}</div>
+
+<!-- if the button start is pushed the message_counter is shown -- works -->
 <ng-template [ngIf]="is_recieving == 'start'">
   {{ message_counter }}
 </ng-template>
 
+<!-- if the button start is pushed the message_counter is not shown -- works-->
 <ng-template [ngIf]="is_recieving == 'home'"> </ng-template>
 
+<!-- if the button start is pushed the message_counter is shown -- works-->
 <ng-template [ngIf]="is_recieving == 'stop'">
   {{ message_counter }}
-</ng-template> -->
+</ng-template>
 
 <!-- <hello name="{{ name }}"></hello> -->
 <!-- <p>Start editing to see some magic happen :)</p> -->
