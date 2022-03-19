@@ -1,4 +1,9 @@
+<mat-button-toggle-group #toggle="matButtonToggleGroup">
+  <mat-button-toggle value="1">Start receiving</mat-button-toggle>
+  <mat-button-toggle value="0">Stop receiving</mat-button-toggle>
+</mat-button-toggle-group>
+<div>Selected value: {{ toggle.value }}</div>
+<!-- {{ message_counter }} -->
+
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Start editing to see some magic happen :)</p>
