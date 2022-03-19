@@ -7,12 +7,15 @@ import { interval } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  name = 'Angular ' + VERSION.major;
+  // name = 'Angular ' + VERSION.major;
+  is_recieving: string;
   message_counter: number;
   ngOnInit(): void {
+    // if (this.is_recieving) {
     const obs$ = interval(300);
     obs$.subscribe((d) => {
       this.message_counter = d;
     });
+    // }
   }
 }
